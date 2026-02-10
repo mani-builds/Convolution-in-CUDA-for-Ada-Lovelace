@@ -18,6 +18,11 @@ do {                \
 
 #define IDX2C(i, j, ld) ((j)*(ld) + (i))
 
+
+// void im2col() {
+//   // Transform the input to matrix where each col is flattened patch
+
+// }
 __global__ void convolution_kernel() {
 
 
