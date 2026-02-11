@@ -6,7 +6,7 @@ Profile: High Latency and Low Occupancy
 
 Stage 2: Basic Optimizations 
 Constant memory for the Kernel (since the data doesn't change during execution)
-Shared Memory Tiling. Reduces global accessess dramatically 11x fewer
+Shared Memory Tiling. Reduces global accesses dramatically 11x fewer
 Profile these
 
 Stage 3: im2col - convert a 2D image into an array by flattening it.
@@ -18,7 +18,7 @@ How many per SM:
 No. of SMs:
 
 Tensor core GEMM using CUBLAS library
-GEMM with WMMA: Use CUDA's WMMA API (Warp Matrix Multiply-Accumulate) for FP16 tensor ops.
+  * [ ] GEMM with WMMA: Use CUDA's WMMA API (Warp Matrix Multiply-Accumulate) for FP16 tensor ops.
 Rules: Dimensions multiple of 8/16, FP16 inputs, enable CUDNN_TENSOR_OP_MATH if using cuDNN for comparison.
 Layout: Use NHWC (channels last) for better tensor core perf.
 Benchmark: Compare to cuDNN (cudnnConvolutionForward with TENSOR_OP_MATH). Aim for close-to-peak TFLOPS on Ampere.

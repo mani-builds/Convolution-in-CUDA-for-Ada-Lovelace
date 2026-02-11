@@ -18,6 +18,7 @@ do {                \
 
 #define IDX2C(i, j, ld) ((j)*(ld) + (i))
 
+#define FILTER_RADIUS 1
 
 // void im2col() {
 //   // Transform the input to matrix where each col is flattened patch
