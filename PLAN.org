@@ -13,19 +13,22 @@ Day 3: cutlass, cuTE lecture
         - tiled with shared memory conv
 
 * TODO Implement im2col on GPU(flatten an image by converting it into padded matrix) then use cuBLAS or cuDNN GEMM.
-        - [ ] Understand im2col
-        - [ ] Implement on CPU (use NUMPY)
+        - [X] Understand im2col
+        - [X] Implement on CPU (use NUMPY)
         - [ ] Implement the kernel for GPU and test it
 
 * TODO Use cuDNN's convolution for comparison
+- [ ] Do convolution on basic kernel and input matrix
 
 * TODO Implement using WMMA (Leverage Tensor cores)
-- [ ] Do the basic wmma GEMM
+- [X] Do the basic wmma GEMM
         - Load input image and convert it into a matrix
         - Load the kernel as matrix
         - Can you perform convolution like in Naive conv? (Ans: No, since it's not efficient)
 
         - Use GEMM (? - if you have used im2col)
+
+- [ ] Implement WMMA convolution as GEMM with im2col
 
 Test: Use MNIST or synthetic data. Verify against NumPy convolve.
 
