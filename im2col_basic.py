@@ -4,12 +4,12 @@ import math
 def dim_output(size_of_input, P, K, S):
     return math.floor((size_of_input + 2*P - K) / S ) + 1
 
-image = np.array([i for i in range(0,3*5*5)])
-image = image.reshape([3,5,5]) # channel, row, col
+image = np.array([i for i in range(0,1*5*5)])
+image = image.reshape([1,5,5]) # channel, row, col
 
 # This is a single filter and the output will be Grayscale version of input
-filter_unshaped = np.array([i for i in range(0,3*3*3)])
-filter = filter_unshaped.reshape([3,3,3])
+filter_unshaped = np.array([i for i in range(0,1*3*3)])
+filter = filter_unshaped.reshape([1,3,3])
 print(f"image's shape: {image.shape}")
 print(image)
 print(f"filter's shape: {filter.shape}")

@@ -12,10 +12,10 @@ Day 3: cutlass, cuTE lecture
         - Naive conv
         - tiled with shared memory conv
 
-* TODO Implement im2col on GPU(flatten an image by converting it into padded matrix) then use cuBLAS or cuDNN GEMM.
+* DONE Implement im2col on GPU(flatten an image by converting it into padded matrix) then use cuBLAS or cuDNN GEMM.
         - [X] Understand im2col
         - [X] Implement on CPU (use NUMPY)
-        - [ ] Implement the kernel for GPU and test it
+        - [X] Implement the kernel for GPU and test it
 
 * TODO Use cuDNN's convolution for comparison
 - [ ] Do convolution on basic kernel and input matrix
@@ -37,5 +37,7 @@ Profile: Nsight for bottlenecks (e.g., add kernel fusion if loads are slow).
 Make it an executable in linux like a library
 
 Make it importable with pytorch
+
+
 End: Feb 14
 
